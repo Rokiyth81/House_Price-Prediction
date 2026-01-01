@@ -53,4 +53,5 @@ if st.button(" Predict Price"):
         prediction = model.predict(input_df)
 
 
-        st.success(f"💰 Estimated House Price: **${prediction[0]:,.2f}**")
+        st.success(f" Estimated House Price: **${prediction[0]:,.2f}**")
+
