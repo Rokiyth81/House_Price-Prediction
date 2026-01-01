@@ -11,7 +11,7 @@ except:
 
 st.set_page_config(page_title="House Price Prediction", layout="centered")
 
-st.title("🏠 House Price Prediction")
+st.title(" House Price Prediction")
 st.write("Enter the house details below to predict the price")
 
 inputs = [
@@ -41,7 +41,7 @@ for i, feature in enumerate(inputs):
             step=1.0
         )
 
-if st.button("🔍 Predict Price"):
+if st.button(" Predict Price"):
     # Convert categorical
     input_data['CentralAir'] = 1 if input_data['CentralAir'] == 'Yes' else 0
 
@@ -51,5 +51,6 @@ if st.button("🔍 Predict Price"):
     else:
         input_df = pd.DataFrame([input_data], columns=inputs)
         prediction = model.predict(input_df)
+
 
         st.success(f"💰 Estimated House Price: **${prediction[0]:,.2f}**")
